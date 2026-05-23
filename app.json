@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "EAC AutoPass",
+    "slug": "eac-autopass",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1565C0"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.eacacommunity.autopass",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Required to scan vehicle QR codes and upload documents at the border.",
+        "NSPhotoLibraryUsageDescription": "Required to upload vehicle documents for permit applications.",
+        "NSFaceIDUsageDescription": "Used for secure login to your EAC AutoPass account."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#1565C0"
+      },
+      "package": "com.eacacommunity.autopass",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "VIBRATE",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "eac-autopass-project-id"
+      }
+    }
+  }
+}
